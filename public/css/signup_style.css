@@ -1,0 +1,86 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #afcce8, #cfdeec );
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section {
+    top: 50%;
+    transform:translate(0,-50%);
+    position: relative;
+	width: 500px;
+    height: 600px;
+	padding: 70px;
+	background-color: #fff;
+	margin: auto;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+section .signup {
+	position: absolute;
+    width: 360px;
+}
+
+section .signup li h1 {
+    font-family: 'Raleway', sans-serif;
+    font: bold 25px/30px "arial";
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section input, button{
+    margin-bottom: 20px;
+}
+
+section input {
+    border: 1px solid #666;
+    width: 100%;
+    height: 40px;
+    padding: 10px 12px;
+}
+
+section #signup_btn {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #cfdeec;
+    background-color: #cfdeec;
+	font: bold 11px/30px;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+	box-shadow: 5px 5px 10px rgba(207, 222, 236, 0.6);
+	border-radius: 4px;
+}
+
+section .signup label {
+    margin-bottom: 5px;
+    display:inline-block;
+}
+
+
+section .signup .login {
+    text-align: center;
+}
+
+section .signup .login a {
+    color:#0489B1;
+}

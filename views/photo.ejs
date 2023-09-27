@@ -1,0 +1,23 @@
+<% for (const i in latestResults) { %>
+    <% if (latestResults.hasOwnProperty(i)) { %>
+    <article class="load_article" data-index="<%= i %>">
+        <div class="polaroid">
+            <% if (latestResults[i].imgBase64) { %>
+            <!-- 이미지 데이터가 있는 경우 이미지 표시 -->
+            <img src="data:image/jpeg;base64, <%= latestResults[i].imgBase64 %>" alt="">
+            <% } %>
+            <div>
+                <h2><%= latestResults[i].title %></h2>
+                <form method="post" action="/process/like">
+                    <button class="likeBtn">
+                        <i class="<%= latestResults[i].isLiked ? 'fa-solid fa-heart fa-beat' : 'fa-regular fa-heart' %>" style="<%= latestResults[i].isLiked ? 'color: #ff3838;' :''  %>"></i><i id="like"><%= latestResults[i].like %></i>
+                    </button>
+                <p id="load_content"><%= latestResults[i].content %></p>
+                <p id = 'writer' style="display: none;"><%= latestResults[i].date.toDateString() %> by <%= latestResults[i].writer %></p>
+                <input type="hidden" name="no" class="nodiv" value="<%= latestResults[i].no %>">
+                </form>
+            </div>
+        </div>
+    </article>
+    <% } %>
+<% } %>

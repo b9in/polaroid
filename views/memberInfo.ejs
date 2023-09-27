@@ -1,0 +1,17 @@
+<div class="wrap">
+    <h2>Member Information</h2>
+    <hr>
+    <form method="post" action="/process/updateuser">
+        <ul>
+            <li>
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Username" name="id" value="<%= sessionId %>" required>
+            </li>
+            <li>
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="Password" name="password" value="<%= sessionPwd %>" required>
+            </li>
+            <li><input type="submit" id="update_btn" value="Update" name="update"></li>
+        </ul>
+    </form>
+</div>

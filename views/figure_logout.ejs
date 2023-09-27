@@ -1,0 +1,41 @@
+<figure id="figure_logout">
+    <div class="inner_logout">
+        <div class="logout_title">
+            <h1 id="feed">PHOTOS</h1>
+
+                <form method="post" action="/process/my">
+                    <input id="my" type="submit" value="MY"></i>
+                </form>
+                <form method="post" action="/process/mylike">
+                    <input id="like" type="submit" value=" "><i class="fa-solid fa-heart"></i>
+                </form>
+        </div>
+
+        <form method="post" action="/process/page">
+            <input class="btnPrev" name="prev" type="submit" value="prev">
+            <input class="btnNext" name="next" type="submit" value="next">
+            <input class="textdiv" type="hidden" name="text" value="<%= text %>">
+        </form>
+        <div class="wrap">
+            <% if (page == 1) { %>
+                <article id="upload">
+                    <div class="polaroid">
+                        <form method="post" action="/process/move">
+                            <button id="addphoto" name="upload">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        <div>
+                            <h2>Title</h2>
+                            <i></i>
+                            <p>content</p>
+                        </div>
+                    </div>
+                </article>
+            <% } %>
+
+            <%- include('photo') %>
+
+        </div>
+    </div>
+</figure>

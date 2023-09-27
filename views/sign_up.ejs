@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ce6b0061.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Ramabhadra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/signup_style.css">
+    <title>POLAROID</title>
+</head>
+<body>
+    <form method="post" action="/process/adduser">
+        <section>
+            <ul class="signup">
+                <li><h1>SIGN UP</h1></li>
+                <li>
+                    <label for="username">Username</label><br>
+                    <input type="text" placeholder=" Username" name="id" required>
+                </li>
+                <li>
+                    <label for="password">Password</label><br>
+                    <input type="password" placeholder=" Password" name="password" required>
+                </li>
+                <li>
+                    <label for="r_pwd">Repeat Password</label><br>
+                    <input type="password" placeholder=" Repeat Password" name="r_pwd" required>
+                </li>
+                <li><input type="submit" id="signup_btn" value="Sign up" name=""></li>
+                <li class="login">Already have an account? <a href="login">Login</a></li>
+            </ul>
+            <ul>
+            </ul>
+        </section>
+    </form>
+</body>
+</html>

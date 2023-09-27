@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ce6b0061.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>POLAROID</title>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <form method="post" action="/">
+                <input type="submit" value="POLAROID" name="polaroid" id="mainhref">
+            </form>
+
+            <ul id="gnb">
+                <form method="post" action="/process/search">
+                    <li><input type="text" name="text" id="search-text"></li>
+                    <li>
+                        <button id="searchBtn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </li>
+                </form>
+            </ul>
+
+            <ul class="util">
+                <li><a href="<%= li_1 %>" id="util_1"><%= util_1 %></a></li>
+                <li><a href="<%= li_2 %>" id="util_2"><%= util_2 %></a></li>
+            </ul>
+        </div>
+    </header>
+
+        <% if (data != 'Login') { %>
+            <%- include('figure_logout') %>
+        <% } else { %>
+            <%- include('figure_login') %>
+        <% } %>
+
+    <section>
+        <div class="inner">
+            <h1>TRENDING</h1>
+            <div class="wrap">
+                <%- include('photo_like') %>
+            </div>
+        </div>
+    </section>
+
+    <%- include('footer') %>
+
+    <%- include('popup') %>
+    <script src="../public/client.js"></script>
+</body>
+</html>

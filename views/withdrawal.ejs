@@ -1,0 +1,24 @@
+<div class="wrap">
+    <h2>Member Withdrawal</h2>
+    <hr>
+    <form method="post" action="/process/withdrawal">
+        <ul>
+            <li>
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Username" name="id" value="<%= sessionId %>" readonly>
+            </li>
+            <li>
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="Password" name="password" value="" required>
+            </li>
+            <li>
+                <label for="r_pwd">Repeat Password</label><br>
+                <input type="password" placeholder="Repeat Password" name="r_pwd" required>
+            </li>
+            <li><input type="submit" id="withdrawal" value="Withdrawal" name="withdrawal"></li>
+        </ul>
+    </form>
+</div>
+<div class="caution">
+    <p><i class="fa-solid fa-trash"></i> &nbsp;&nbsp; If you cancel your membership, all posts will be deleted.</p>
+</div>

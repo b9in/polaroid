@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ce6b0061.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/login_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>POLAROID</title>
+</head>
+<body>
+    <form method="post" action="/process/login">
+        <section>
+            <ul class="login">
+                <li><h1><a href="/">POLAROID</a></h1></li>
+                <li><input type="text" placeholder=" Username" name="id" required></li>
+                <li><input type="password" placeholder=" Password" name="password" required></li>
+                <li>
+                    <input type="checkbox" id="remember" name="rememberMe">
+                    <label for="remember">Remember me</label>
+                </li>
+                <li><input type="submit" id="login_btn" name="" value="submit"></li>
+                <li class="sign">Not a member? <a href="sign_up">Sign up</a></li>
+            </ul>
+            <ul>
+            </ul>
+        </section>
+    </form>
+    <script src="../public/login_client.js"></script>
+</body>
+</html>

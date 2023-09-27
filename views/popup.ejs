@@ -1,0 +1,22 @@
+<div class="background">
+    <div class="window">
+        <div class="popup">
+            <img id="popup-image" src="" alt="">
+            <h2 id="popup-title"></h2>
+            <div id="popup-content"></div>
+
+            <form method="post" action="/process/move">
+                <input class="nodiv" type="hidden" name="no" value="">
+                <input type="submit" id="update" value="update" name="update">
+            </form>
+
+            <form method="post" action="/process/delete">
+                <input class="nodiv" type="hidden" name="no" value="">
+                <input type="submit" id="delete" value="delete">
+            </form>  
+                <p id="popup-date"></p>
+
+            <button id="close">X</button>
+        </div>
+    </div>
+</div>

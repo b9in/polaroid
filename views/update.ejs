@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ce6b0061.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/update_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>POLAROID</title>
+</head>
+<body>
+    <div id="img_area"></div>
+    <section>
+        <ul id="upper_menu">
+            <form method="post" action="/process/move">
+                <li>
+                    <input type="submit" value="x" name="back">
+                </li>
+            </form>
+        </ul>
+        <form method="post" action="/process/update">
+            <div id="upload-section">
+                <input class="nodiv" type="hidden" name="no" value="<%= results[0].no %>">
+                <% if (results[0].imgBase64) { %>
+                    <!-- 이미지 데이터가 있는 경우 이미지 표시 -->
+                    <img src="data:image/jpeg;base64, <%= results[0].imgBase64 %>" alt="" class="uploadImage">
+                <% } %>
+                <ul>
+                    <li><input id="imageTitle" placeholder=" title" name="title" value="<%= results[0].title %>" maxlength="20"></li>
+                    <li><textarea id="imageDescription" placeholder=" Description" maxlength="200" name="content"><%= results[0].content %></textarea></li>
+                    <li><input type="submit" id="sendButton" value="update"></li>
+                </ul>
+            </div>
+
+        </form>
+    </section>
+
+    <script src="../public/update_client.js"></script>
+</body>
+</html>

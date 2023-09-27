@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ce6b0061.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../public/css/mypage_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>POLAROID</title>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <form method="post" action="/">
+                <input type="submit" value="POLAROID" name="polaroid" id="mainhref">
+            </form>
+
+            <ul class="util">
+                <li><a href="/mypage" id="util_1">My Page</a></li>
+                <li><a href="/logout" id="util_2">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+
+        <div class="side_menu">
+                <ul>
+                    <h1>MY PAGE</h1>
+                    <li><a href="/mypage/?page=Info">Member Information</a></li>
+                    <li><a href="/mypage/?page=withdrawal">Membership Withdrawal</a></li>
+                </ul>
+        </div>
+
+        <div class="inner">
+            <% if (page === "withdrawal") { %>
+                <%- include('withdrawal') %>
+            <% } else { %>
+                <%- include('memberInfo') %>
+                
+            <% } %> 
+        </div>
+    </section>
+    <%- include('footer') %>
+</body>
+</html>

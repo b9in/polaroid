@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "errorhandler": "^1.5.1",
+    "express": "^4.18.2",
+    "express-error-handler": "^1.1.0",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.5.0",
+    "sharp": "^0.32.5"
+  }
+}

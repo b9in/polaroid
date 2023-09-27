@@ -1,0 +1,705 @@
+@charset 'utf-8';
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* header */
+header {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+    width: 100%;
+    height: 120px;
+    margin: 0px auto;
+    position: relative;
+}
+
+header .inner #mainhref {
+	font-family: 'Kaushan Script', cursive;
+	text-align:left;
+	position: absolute;
+    margin-left: 150px;
+    font-size: 40px;
+	left: 0px;
+	bottom: 15px;
+	width: 210px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	font-weight: bold;
+	color: #555;
+}
+
+header .inner #mainhref:hover{
+	cursor: pointer;
+}
+
+
+header .inner h1 a {
+	font-family: 'Kaushan Script', cursive;
+	font: bold 24px/1; /* 폰트 축약형 (font-weight: bold; font-size: 24px; line-height: 1; font-family: "arial"; */
+	color: #444;
+}
+
+header .inner .util{
+	position: absolute;
+	top: 20px;
+	right: 150px;
+}
+
+header .inner .util li {
+	float: left;
+}
+
+header .inner .util li a {
+	display: block;
+	font: 15px/1 "arial";
+	color: #888;
+	padding: 0px 10px;
+}
+
+header .inner #gnb {
+	position: absolute;
+	bottom: 0px;
+	right:150px;
+}
+
+header .inner #gnb li {
+	float: left;
+	line-height: 60px;
+}
+
+header .inner #gnb li input[type="text"] {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+    padding: 10px 12px;
+    transition: 0.5s;
+}
+
+header .inner #gnb li input[type="text"]:hover {
+    width: 300px;
+    position:relative;
+}
+
+header .inner #gnb li input[type="text"]:focus {
+    width: 300px;
+    position:relative;
+}
+
+header .inner #gnb li button[type="submit"] {
+	border: none;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+}
+
+header .inner #gnb li i{
+    font-size: 15px;
+	margin-left: 10px;
+}
+
+/* figure */
+#figure_login {
+    background-color: black;
+    width: 100%;
+    height: calc(100vh - 120px);
+	position: relative;
+	overflow: hidden;
+	padding-top: 250px;
+}
+
+#figure_logout {
+    background-color: black;
+    width: 100%;
+    height: 600px;
+	position: relative;
+	overflow: hidden;
+	padding-top: 250px;
+}
+
+figure video{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+figure .inner_logout {
+    background: linear-gradient(to right, #afcce8, #cfdeec );
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+figure .inner_logout h1 {
+	font: bold 30px/1 "arial";
+	color: #555;
+	margin-left: 150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+figure .inner_logout .logout_title {
+	position: relative;
+	display: flex;
+}
+
+
+figure .inner_logout .logout_title h1 {
+	width: 200px;
+}
+
+figure .inner_logout .logout_title #my {
+	position: absolute;
+	right: 220px;
+	width: 100px;
+	height: 29px;
+	margin-top: 52px;
+	margin-bottom: 50px;
+	font-size: 22px;
+	text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
+	border:none;
+	background-color:white;
+	box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	font-family: 'Times';
+}
+
+figure .inner_logout .logout_title #my:hover {
+	cursor: pointer;
+}
+
+figure .inner_logout .logout_title #like {
+	position: absolute;
+	right: 150px;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	z-index: 5;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+figure .inner_logout .logout_title #like:hover {
+	cursor: pointer;
+}
+
+
+figure .inner_logout .logout_title i {
+	text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
+	font-size:xx-large;
+	position: absolute;
+	right: 145px;
+	color: #ff3838;
+	width:50px;
+	height: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+figure .inner_logout .wrap {
+	overflow: hidden;
+	height: 620px;
+	padding-left: 138px;
+	padding-right: 138px;
+}
+
+figure .inner_logout .wrap::after { /* 자식 요소인 article의 float 해제 */
+	content: "";
+	display: block;
+	clear: both;
+}
+
+figure .inner_logout .wrap article {
+	width: 24.5%;
+	height: 71%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 12px;
+	margin-bottom: 30px;
+}
+
+figure .inner_logout .wrap article .polaroid {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	padding: 14px;
+    float: left;
+	transition: 0.3s;
+}
+
+figure .inner_logout .wrap article .polaroid:hover {
+	transform: scale(1.05);
+}
+
+figure .inner_logout .wrap article .polaroid img {
+	width: 100%;
+	height: 11vw;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+
+figure .inner_logout .wrap article .polaroid #addphoto {
+	position: relative;
+	width: 100%;
+	height: 11vw;
+	z-index: 5;
+}
+
+figure .inner_logout .wrap article .polaroid #addphoto i {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+figure .inner_logout .wrap article .polaroid div {
+    position: relative;
+}
+
+figure .inner_logout .wrap article .polaroid div h2 {
+    display: inline-block;
+	margin-top: 15px;
+	font: bold 1.5em/1 'Times';
+	letter-spacing: 1px;
+	color: #444;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+figure .inner_logout .wrap article .polaroid .likeBtn{
+	position: absolute;
+	width: 30%;
+	height: 2vw;
+	right: 0px;
+	top: 5px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+figure .inner_logout .wrap article .polaroid div i{
+    position: absolute;
+    right: 25px;
+}
+
+figure .inner_logout .wrap article .polaroid div #like{
+    position: absolute;
+    right: 10px;
+}
+
+figure .inner_logout .wrap article .polaroid div p {
+	font: 1em 'Verdana';
+	line-height: 16px;
+	letter-spacing: -1px;
+	word-spacing: 1px;
+	color: #777;
+	margin-bottom: 15px;
+	height: 150px;
+	white-space: normal;
+	margin-top: 10px;
+}
+
+figure .inner_logout .wrap article .polaroid div #writer{
+	font: 13px/1.2 'arial';
+	color: #999;
+	text-align: right;
+	font-style: italic;
+	margin-right: 5px;
+}
+
+figure .inner {
+	width: 100%;
+	margin: 0px auto;
+	position: relative;
+	bottom: 50px;
+}
+
+figure .inner h1{
+	margin-left: 150px;
+	font: normal 120px/1 "arial";
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+figure .inner p {
+	margin-left: 150px;
+	font: 16px/1.4 "arial";
+	color: #fff;
+	margin-bottom: 60px;
+}
+
+figure .inner a {
+	margin-left: 150px;
+    position:absolute;
+	display: block;
+	width: 400px;
+	height: 30px;
+	border: 1px solid #bbb;
+	font: bold 11px/30px "arial"; /* line-height값을 높이값과 똑같이 지정하면 해당 버튼 영역 안에서 글자를 세로 가운데에 배치할 수 있음 */
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+    z-index: 2;
+	bottom: -70px;
+
+}
+
+figure .inner a:hover{
+	background: #fff;
+	color: #555;
+}
+
+
+figure .btnPrev {
+	background-image : url('../img/previous.png');
+    background-repeat : no-repeat;
+	color:rgba(0,0,0,0);
+	font-size: 1em;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.5s;
+}
+
+figure .btnPrev:hover {
+	transform: scale(1.2) translate(0, -45%);
+}
+
+
+figure .btnNext {
+	background-image : url('../img/next.png');
+    background-repeat : no-repeat;
+	color:rgba(0,0,0,0);
+	font-size: 1em;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.5s;
+}
+
+figure .btnNext:hover {
+	transform: scale(1.2) translate(0, -45%);
+}
+
+
+/* section */
+section {
+	width: 100%;
+	height: 40vw;
+	padding: 100px 0px;
+    background-color: #efefef;
+	position: relative;
+}
+
+section .inner {
+	display: flex;
+}
+
+section .inner h1 {
+	font: bold 30px/1 "arial";
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-left: 150px;
+}
+
+section .inner .wrap {
+	position: absolute;
+	right: 0px;
+	width: 60%;
+}
+
+section .inner .wrap::after { /* 자식 요소인 article의 float 해제 */
+	content: "";
+	display: block;
+	clear: both;
+}
+
+section .inner .wrap article {
+	width: 26.8%;
+	height: 16vw;
+	float: left;
+	box-sizing: border-box;
+	padding: 12px;
+	margin-right: 3%;
+}
+
+section .inner .wrap article .polaroid {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	padding: 14px;
+    float: left;
+}
+
+section .inner .wrap article .polaroid:hover {
+	transform: scale(1.05);
+}
+
+section .inner .wrap article .polaroid img {
+	width: 100%;
+}
+
+section .inner .wrap article .polaroid div {
+    position:relative;
+}
+
+section .inner .wrap article .polaroid div h2 {
+    display: inline-block;
+	margin-top: 15px;
+	font: bold 11px/1 'orbitron';
+	letter-spacing: 1px;
+	color: #444;
+	margin-bottom: 5px;
+}
+
+section .inner .wrap article .polaroid .likeBtn{
+	position: absolute;
+	width: 30%;
+	height: 2vw;
+	right: 0px;
+	top: 5px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0); 
+}
+
+section .inner .wrap article .polaroid div i{
+    position: absolute;
+    top: 20%;
+	right: 20%;
+}
+
+section .inner .wrap article .polaroid div #like{
+    position: absolute;
+    top: 20%;
+	right: 2%;
+}
+
+section .inner .wrap article .polaroid div p {
+	font: 10px/1.2 'arial';
+	letter-spacing: 1px;
+	color: #777;
+	margin-bottom: 15px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: #333;
+	padding: 100px 0px;
+	border-top: 1px solid #888;
+}
+
+footer .inner {
+	margin-left: 150px;
+	margin-right: 170px;
+}
+
+footer .inner .upper::after { /* 상단 영역 float 해제 */
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer .inner .upper h1 {
+	float: left;
+	font-family: 'Kaushan Script', cursive;
+	font: bold 24px/1;
+	color: #666;
+}
+
+footer .inner .upper ul {
+	float: right;
+}
+
+footer .inner .upper ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+footer .inner .upper ul li a {
+	font: bold 14px/1 "arial";
+	color: #666;
+}
+
+footer .inner .lower {
+	width: 100%;
+	padding-top: 20px;
+}
+
+footer .inner .lower address {
+	width: 100%;
+	font: 12px/1.3  "arial";
+	color: #777;
+	margin-bottom: 20px;
+}
+
+footer .inner .lower p {
+	width: 100%;
+	font: 12px/1 "arial";
+	color: #777;
+}
+
+/* popup */
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	
+	/* 숨기기 */
+	z-index: -1;
+	opacity: 0;
+  }
+
+.show {
+    opacity: 1;
+    z-index: 1000;
+    transition: all .5s;
+}
+
+.window {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+	width: 500px;
+	height: 600px;
+	
+	/* 초기에 약간 아래에 배치 */
+	transform: translate(-50%, -40%);
+}
+  
+.show .popup {
+	transform: translate(-50%, -50%);
+	transition: all .5s;
+}
+
+#popup-image {
+	width: 400px;
+	margin: 50px 50px 20px;
+	border-radius: 4px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#popup-title {
+    display: inline-block;
+	font: bold 20px/1 'Ruda';
+	letter-spacing: 1px;
+	color: #444;
+	margin-bottom: 15px;
+	margin-left: 50px;
+}
+
+#popup-content {
+	font: 15px/1.2 'arial';
+	color: #777;
+	margin: 0px 50px 15px;
+	height: 140px;
+	white-space: normal;
+}
+
+#popup-date {
+	position:fixed;
+	bottom: 50px;
+	right: 0px;
+	font: 13px/1.2 'arial';
+	color: #888;
+	text-align: right;
+	font-style: italic;
+	margin-right: 50px;
+}
+
+.popup ul {
+	display: flex;
+}
+
+
+.popup #close {
+	position: fixed;
+	top:20px;
+	right: 20px;
+	border: none;
+	font:25px;
+	background-color: white;
+}
+
+.popup #update {
+	width: 50px;
+	height: 20px;
+	position: fixed;
+	bottom:50px;
+	left: 50px;
+	border: none;
+	border-radius: 4px;
+	background-color: #555;
+	color: white;
+}
+
+.popup #delete {
+	width: 50px;
+	height: 20px;
+	position: fixed;
+	bottom:50px;
+	left: 110px;
+	border: none;
+	border-radius: 4px;
+	background-color: red;
+	color: white;
+}
+
+.popup .nodiv {
+	display: hidden;
+}
